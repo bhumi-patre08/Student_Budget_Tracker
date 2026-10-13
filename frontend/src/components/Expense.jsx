@@ -13,7 +13,7 @@ function Expense() {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await fetch('http://localhost:5000/api/expenses', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ function Income() {
     const token = localStorage.getItem('token');
 
     const response = await fetch(
-      'http://localhost:5000/api/income',
+      `${import.meta.env.VITE_API_URL}/api/income`,
       {
         method: 'POST',
         headers: {

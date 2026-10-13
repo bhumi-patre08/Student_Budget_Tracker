@@ -20,7 +20,7 @@ function Login({ theme, onToggleTheme }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/${isRegistering ? 'register' : 'login'}`,
+        `${import.meta.env.VITE_API_URL}/api/auth/${isRegistering ? 'register' : 'login'}`,
         {
           method: 'POST',
           headers: {

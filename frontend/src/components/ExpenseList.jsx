@@ -11,7 +11,7 @@ function ExpenseList() {
         const token = localStorage.getItem('token');
 
         const response = await fetch(
-          'http://localhost:5000/api/expenses',
+          `${import.meta.env.VITE_API_URL}/api/expenses`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -40,7 +40,7 @@ function ExpenseList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/expenses/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/expenses/${id}`,
         {
           method: 'DELETE',
           headers: {
@@ -72,7 +72,7 @@ function ExpenseList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/expenses/${editingExpense._id}`,
+        `${import.meta.env.VITE_API_URL}/api/expenses/${editingExpense._id}`,
         {
           method: 'PUT',
           headers: {

@@ -11,7 +11,7 @@ function BudgetList() {
         const token = localStorage.getItem('token');
 
         const response = await fetch(
-          'http://localhost:5000/api/budget',
+          `${import.meta.env.VITE_API_URL}/api/budget`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -40,7 +40,7 @@ function BudgetList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/budget/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/budget/${id}`,
         {
           method: 'DELETE',
           headers: {
@@ -72,7 +72,7 @@ function BudgetList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/budget/${editingBudget._id}`,
+        `${import.meta.env.VITE_API_URL}/api/budget/${editingBudget._id}`,
         {
           method: 'PUT',
           headers: {

@@ -12,7 +12,7 @@ function IncomeList() {
         const token = localStorage.getItem('token');
 
         const response = await fetch(
-          'http://localhost:5000/api/income',
+          `${import.meta.env.VITE_API_URL}/api/income`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ function IncomeList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/income/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/income/${id}`,
         {
           method: 'DELETE',
           headers: {
@@ -73,7 +73,7 @@ function IncomeList() {
       const token = localStorage.getItem('token');
 
       const response = await fetch(
-        `http://localhost:5000/api/income/${editingIncome._id}`,
+        `${import.meta.env.VITE_API_URL}/api/income/${editingIncome._id}`,
         {
           method: 'PUT',
           headers: {
