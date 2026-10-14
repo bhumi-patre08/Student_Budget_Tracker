@@ -17,7 +17,9 @@ import { EXPENSE_CATEGORIES, INCOME_CATEGORIES } from '../categories';
 import { BrandMark, ThemeToggle } from './Brand';
 import TransactionHistory from './TransactionHistory';
 
-const API_URL = import.meta.env.VITE_API_URL || `${import.meta.env.VITE_API_URL}/api`;
+
+const API_URL = `${import.meta.env.VITE_API_URL || ''}/api`;
+
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const COLORS = ['#2563eb', '#60a5fa', '#1d4ed8', '#38bdf8', '#93c5fd', '#0ea5e9', '#3b82f6', '#bfdbfe', '#4f83ee', '#0284c7'];
 const navigationItems = [
